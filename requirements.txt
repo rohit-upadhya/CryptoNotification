@@ -1,0 +1,30 @@
+amqp==5.0.6
+argon2==0.1.10
+asgiref @ file:///tmp/build/80754af9/asgiref_1617740417847/work
+bcrypt==3.2.0
+billiard==3.6.4.0
+celery==5.0.5
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+click==7.1.2
+click-didyoumean==0.0.3
+click-plugins==1.1.1
+click-repl==0.1.6
+Django @ file:///tmp/build/80754af9/django_1617740316746/work
+django-cors-headers==3.7.0
+djangorestframework==3.12.4
+idna==2.10
+kombu==5.0.2
+Pillow==8.2.0
+prompt-toolkit==3.0.18
+psycopg2 @ file:///opt/concourse/worker/volumes/live/7541fe58-2a45-4073-5d69-313e733fc729/volume/psycopg2_1612298592535/work
+pycparser==2.20
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+redis==3.5.3
+requests==2.25.1
+six==1.15.0
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+urllib3==1.26.4
+vine==5.0.0
+wcwidth==0.2.5
