@@ -9,8 +9,6 @@ from pathlib import Path
 
 logger = get_task_logger(__name__)
 
-flag = 0
-max = 0
 #image_path = BASE_DIR.joinpath('img.jpeg')
 
 def check_and_send_email():
@@ -24,23 +22,23 @@ def check_and_send_email():
     eth = e['sell']
     eos = eo['sell']
 
-    if(float(doge) >= 57.0):
+    if(float(doge) >= 45.0):
         now = datetime.now()
         subject = f'Quote at { now }'
         message = f'Hi. \n \n Doge is Selling price is at is at { doge }. Time to sell' 
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['rohitupadhya18@gmail.com',]
         send_mail( subject, message, email_from, recipient_list )
-    if(float(doge) < 52.0):
+    if(float(doge) <= 41.0):
         now = datetime.now()
         subject = f'Quote at { now }'
         message = f'Hi. \n \n Doge is Selling at { doge }. Time to buy' 
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['debarshi.choudhury1@gmail.com', 'rohitupadhya18@gmail.com', ]
+        recipient_list = ['rohitupadhya18@gmail.com',]
         send_mail( subject, message, email_from, recipient_list )
 
 @periodic_task(
-    run_every=(crontab(minute='*/1')),
+    run_every=(crontab(minute='*/5')),
     name="task_check_API_and_send_emial",
     ignore_result=True
 )
