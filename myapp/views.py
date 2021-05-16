@@ -16,21 +16,20 @@ def home(request):
     doge = d['sell']
     eth = e['sell']
     eos = eo['sell']
+    now = datetime.now()
 
     if(float(doge) >= 50.0):
-        now = datetime.now()
         subject = f'Quote at { now }'
         message = f'Hi Rohit. \n \n Doge is Selling price is at is at { doge }. Time to sell' 
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['rohitupadhya18@gmail.com', ]
-        send_mail( subject, message, email_from, recipient_list )
+        #end_mail( subject, message, email_from, recipient_list )
     if(float(doge) < 45.0):
-        now = datetime.now()
         subject = f'Quote at { now }'
         message = f'Hi Rohit. \n \n Doge is Selling price is at is at { doge }. Time to buy' 
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['rohitupadhya18@gmail.com', ]
-        send_mail( subject, message, email_from, recipient_list )
+       #send_mail( subject, message, email_from, recipient_list )
 
 
 
