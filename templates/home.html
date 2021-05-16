@@ -9,6 +9,7 @@
     {{ doge }}
     <h1>Time</h1>
     {{ now }}
+    <p>Users {{ all }}</p>
     <a href="{% url 'logout' %}">Log Out</a>
 {% else %}
     <p>You are not logged in</p>

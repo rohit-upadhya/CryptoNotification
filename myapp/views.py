@@ -5,6 +5,8 @@ from django.conf import settings
 from django.core.mail import send_mail
 from datetime import datetime
 from .forms import CryptoForm
+from .models import Crypto
+import json
 
 # Create your views here.
 
@@ -18,12 +20,18 @@ def home(request):
     eth_sell = eth['sell']
     eos_sell = eos['sell']
     now = datetime.now()
+    new_var = 'emial'
+    all_records = list(Crypto.objects.values_list(new_var, flat=True))[0]
+    #item = all_records.get('email')
+    jsonString = json.dumps(all_records)
+
 
     return render(request, 'home.html',{
         'now' : now,
         'doge': doge_sell,
         'eth': eth_sell,
-        'eosinr': eos_sell
+        'eosinr': eos_sell,
+        'all': all_records
     })
 
 def detailed_quotes(request):
