@@ -20,7 +20,7 @@ def home(request):
     eth_sell = eth['sell']
     eos_sell = eos['sell']
     now = datetime.now()
-    new_var = 'emial'
+    new_var = 'email'
     all_records = list(Crypto.objects.values_list(new_var, flat=True))[0]
     #item = all_records.get('email')
     jsonString = json.dumps(all_records)
